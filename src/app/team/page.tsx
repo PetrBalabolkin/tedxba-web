@@ -37,7 +37,7 @@ const data = [
 const Team = () => {
     return (
         <>
-            <section className="xl:w-[1238px] lg:w-[950px] lg:mx-auto w-auto mx-5 flex flex-col gap-6 mt-20">
+            <section className="xl:w-[1180px] lg:w-[940px] lg:mx-auto w-auto mx-5 flex flex-col gap-6 mt-20">
                 <h2 className="font-medium text-txt-black-prim dark:text-txt-white-prim md:text-[40px] text-[32px]">Organizačný Tím</h2>
                 <div className="w-full grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                     {data.map((member) => (

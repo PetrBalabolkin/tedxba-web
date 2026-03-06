@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/ui/Logo";
 import {
     RiInstagramFill,
     RiLinkedinBoxFill,
@@ -78,10 +78,12 @@ const socials = [
 
 const Footer = () => {
     return (
-        <footer className="xl:w-[1238px] lg:w-[950px] lg:mx-auto w-auto mx-5 flex flex-col gap-20 md:my-25 my-15">
+        <footer className="xl:w-[1180px] lg:w-[940px] lg:mx-auto w-auto mx-5 flex flex-col gap-20 md:my-25 my-15">
             <div className="grid lg:grid-cols-3 lg:grid-rows-1 md:grid-cols-2 md:grid-rows-[auto_1fr] gap-5">
                 <div className="lg:h-full h-fit lg:my-0 md:my-6 flex items-center lg:col-span-1 md:col-span-2">
-                    <Image src="/logo/logo.svg" alt="Logo TEDxBratislava" width={322} height={36} />
+                    <Link href="/">
+                        <Logo width={322} height={36} />
+                    </Link>
                 </div>
                 <div className="flex flex-col gap-6">
                     <div className="flex flex-col gap-5">

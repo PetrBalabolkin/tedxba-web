@@ -14,6 +14,7 @@
   --white: #FFFFFF;
   --white-r: #FAF5F6;
   --black: #0A0002;
+  --logo-ink: #000000;
 
   --border: #E6E1E2;
 
@@ -48,6 +49,7 @@
 .dark {
   --bg: #1F1E1E;
   --border: #4D4B4B;
+  --logo-ink: #FFFFFF;
 }
 
 body {

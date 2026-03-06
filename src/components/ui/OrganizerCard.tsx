@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { RiLinkedinBoxFill, RiMailFill } from "@remixicon/react";
 
 type OrganizerCardProps = {

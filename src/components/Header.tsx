@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import Link from "next/link";
-import Image from "next/image";
+import Logo from "@/components/ui/Logo";
 import { RiMenuFill, RiCloseFill } from "@remixicon/react";
 
 const links = [
@@ -65,9 +65,9 @@ const Header = () => {
                 isVisible ? "translate-y-0" : "-translate-y-full"
             }`}
         >
-            <div className="xl:w-[1238px] lg:w-[950px] lg:mx-auto w-auto mx-5 flex justify-between items-center lg:my-6 my-5">
+            <div className="xl:w-[1180px] lg:w-[940px] lg:mx-auto w-auto mx-5 flex justify-between items-center lg:my-6 my-5">
                 <Link href="/">
-                    <Image src="/logo/logo.svg" alt="Logo TEDxBratislava" width={215} height={24} />
+                    <Logo width={215} height={24} />
                 </Link>
                 <nav className="lg:flex hidden items-center gap-7">
                     {links.map((link) => (
@@ -96,7 +96,7 @@ const Header = () => {
                         <div className="fixed inset-0 flex flex-col gap-6 justify-start items-center h-screen w-screen z-50">
                             <div className="flex justify-between items-center w-full p-5 mb-10">
                                 <Link href="/" onClick={() => setIsMenuOpen(false)}>
-                                    <Image src="/logo/logo.svg" alt="Logo TEDxBratislava" width={215} height={24} />
+                                    <Logo width={215} height={24} />
                                 </Link>
                                 <RiCloseFill
                                     className="cursor-pointer"
