@@ -1,10 +1,12 @@
 import CtaSection from "@/sections/CtaSection";
 import Button from "@/components/Button";
 import HeroHeaderActivator from "@/components/HeroHeaderActivator";
+import PartnerCard from "@/components/ui/PartnerCard";
 import { getTranslations } from "next-intl/server";
 import { getLocale } from "next-intl/server";
 import { getPayload } from "payload";
 import config from "@payload-config";
+import type { Media } from "@/payload-types";
 
 const Support = async () => {
     const t = await getTranslations('SupportPage');
@@ -12,6 +14,16 @@ const Support = async () => {
 
     const payload = await getPayload({ config });
     const settings = await payload.findGlobal({ slug: 'support-settings' });
+
+    const partnersResult = await payload.find({
+        collection: 'partners',
+        where: {
+            pages: { in: ['support'] },
+        },
+        depth: 1,
+        limit: 100,
+    });
+    const partners = partnersResult.docs;
 
     const isSk = locale === 'sk';
 
@@ -107,6 +119,23 @@ const Support = async () => {
                     />
                 </div>
             </section>
+            {partners.length > 0 && (
+                <section className="xl:w-[1180px] lg:w-[940px] lg:mx-auto w-auto mx-5 items-center gap-5 grid xl:grid-cols-6 lg:grid-cols-5 md:grid-cols-4 sm:grid-cols-2 grid-cols-1 md:mt-25 mt-15">
+                    {partners.map((partner) => {
+                        const logoUrl = typeof partner.logo === 'object' && partner.logo !== null
+                            ? (partner.logo as Media).url ?? ''
+                            : '';
+                        return (
+                            <PartnerCard
+                                key={partner.id}
+                                name={partner.name}
+                                logo={logoUrl}
+                                web={partner.web ?? undefined}
+                            />
+                        );
+                    })}
+                </section>
+            )}
             <CtaSection />
         </>
     );

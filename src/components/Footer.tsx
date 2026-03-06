@@ -23,7 +23,7 @@ const Footer = async () => {
     const t = await getTranslations('Footer');
 
     const nav = [
-        { name: t('catalog'), href: "/catalog" },
+        // { name: t('catalog'), href: "/catalog" },
         { name: t('team'), href: "/team" },
         { name: t('blog'), href: "/blog" },
         { name: t('support'), href: "/support" },

@@ -12,7 +12,7 @@ import LanguageSwitcher from "@/components/LanguageSwitcher";
 const Header = () => {
     const t = useTranslations('Header');
     const links = [
-        { href: "/catalog", label: t('catalog') },
+        // { href: "/catalog", label: t('catalog') },
         { href: "/blog", label: t('blog') },
         { href: "/support", label: t('support') },
         { href: "/team", label: t('team') },
