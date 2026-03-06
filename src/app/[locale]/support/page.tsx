@@ -1,4 +1,4 @@
-import Newsletter from "@/sections/newsletter";
+import CtaSection from "@/sections/CtaSection";
 import Button from "@/components/Button";
 import HeroHeaderActivator from "@/components/HeroHeaderActivator";
 import { getTranslations } from "next-intl/server";
@@ -85,7 +85,7 @@ const Support = async () => {
                     />
                 </div>
             </section>
-            <Newsletter />
+            <CtaSection />
         </>
     );
 };

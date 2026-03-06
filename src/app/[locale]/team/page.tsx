@@ -3,6 +3,7 @@ import OrganizerCard from "@/components/ui/OrganizerCard";
 import { getTranslations } from "next-intl/server";
 import { getPayload } from 'payload';
 import config from '@payload-config';
+import CtaSection from "@/sections/CtaSection";
 
 const Team = async () => {
     const t = await getTranslations('TeamPage');
@@ -36,7 +37,7 @@ const Team = async () => {
                     })}
                 </div>
             </section>
-            <Newsletter />
+            <CtaSection />
         </>
     );
 }

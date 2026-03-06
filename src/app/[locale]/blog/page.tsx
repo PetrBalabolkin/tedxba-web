@@ -1,4 +1,4 @@
-import Newsletter from "@/sections/newsletter";
+import CtaSection from "@/sections/CtaSection";
 import ArticleCard from "@/components/ui/ArticleCard";
 import { getTranslations } from "next-intl/server";
 
@@ -68,7 +68,7 @@ const Blog = async () => {
                     ))}
                 </div>
             </section>
-            <Newsletter />
+            <CtaSection />
         </>
     );
 };
