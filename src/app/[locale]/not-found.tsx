@@ -37,11 +37,11 @@ const NotFound = () => {
             />
             <div className="w-screen h-screen flex justify-center items-center">
                 <div className="flex flex-col mx-5 sm:w-[500px] w-full items-start gap-10">
-                    <span className="text-9xl text-txt-black-prim font-bold w-fit">:(</span>
+                    <span className="text-9xl text-txt-black-prim dark:text-txt-white-prim font-bold w-fit">:(</span>
                     <div className="flex flex-col gap-5 items-start">
                         <div className="flex flex-col gap-2">
-                            <h1 className="text-4xl font-medium text-txt-black-prim">{t('title')}</h1>
-                            <span className="font-light text-txt-black-sec text-xl">{t('subtitle')}</span>
+                            <h1 className="text-4xl font-medium text-txt-black-prim dark:text-txt-white-prim">{t('title')}</h1>
+                            <span className="font-light text-txt-black-sec dark:text-txt-white-sec text-xl">{t('subtitle')}</span>
                         </div>
                         <Button href='/' text={t('btn')} />
                     </div>
