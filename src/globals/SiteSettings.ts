@@ -33,4 +33,3 @@ export const SiteSettings: GlobalConfig = {
         },
     ],
 }
-

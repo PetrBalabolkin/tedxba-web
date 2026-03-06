@@ -19,4 +19,3 @@ const CtaSection = async () => {
 };
 
 export default CtaSection;
-

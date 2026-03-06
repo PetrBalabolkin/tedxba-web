@@ -2,9 +2,31 @@ import CtaSection from "@/sections/CtaSection";
 import Button from "@/components/Button";
 import HeroHeaderActivator from "@/components/HeroHeaderActivator";
 import { getTranslations } from "next-intl/server";
+import { getLocale } from "next-intl/server";
+import { getPayload } from "payload";
+import config from "@payload-config";
 
 const Support = async () => {
     const t = await getTranslations('SupportPage');
+    const locale = await getLocale();
+
+    const payload = await getPayload({ config });
+    const settings = await payload.findGlobal({ slug: 'support-settings' });
+
+    const isSk = locale === 'sk';
+
+    const contactBtnLabel =
+        (isSk ? settings.contactBtn?.labelSk : settings.contactBtn?.labelEn) || t('partner.contactBtn');
+    const contactBtnHref = settings.contactBtn?.href || 'mailto:partneri@tedxbratislava.sk';
+
+    const callBtnLabel =
+        (isSk ? settings.callBtn?.labelSk : settings.callBtn?.labelEn) || t('partner.callBtn');
+    const callBtnHref = settings.callBtn?.href || 'tel:+421949875764';
+
+    const volunteerBtnLabel =
+        (isSk ? settings.volunteerBtn?.labelSk : settings.volunteerBtn?.labelEn) || t('volunteer.btn');
+    const volunteerBtnHref = settings.volunteerBtn?.href || 'mailto:partneri@tedxbratislava.sk';
+
     return (
         <>
             <section className="relative w-full h-[100vh] bg-[url('/images/support/hero.png')] bg-cover bg-center">
@@ -43,14 +65,14 @@ const Support = async () => {
                     </div>
                     <div className="flex flex-col gap-4 items-start">
                         <Button
-                            text={t('partner.contactBtn')}
+                            text={contactBtnLabel}
                             variant="primary"
-                            href="mailto:partneri@tedxbratislava.sk"
+                            href={contactBtnHref}
                         />
                         <Button
-                            text={t('partner.callBtn')}
+                            text={callBtnLabel}
                             variant="secondary"
-                            href="tel:+421949875764"
+                            href={callBtnHref}
                         />
                     </div>
                 </div>
@@ -79,9 +101,9 @@ const Support = async () => {
                         </p>
                     </div>
                     <Button
-                        text={t('volunteer.btn')}
+                        text={volunteerBtnLabel}
                         variant="primary"
-                        href="mailto:partneri@tedxbratislava.sk"
+                        href={volunteerBtnHref}
                     />
                 </div>
             </section>

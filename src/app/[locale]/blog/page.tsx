@@ -1,6 +1,8 @@
 import CtaSection from "@/sections/CtaSection";
 import ArticleCard from "@/components/ui/ArticleCard";
 import { getTranslations } from "next-intl/server";
+import { getPayload } from "payload";
+import config from "@payload-config";
 
 const articles = [
     {
@@ -39,6 +41,11 @@ const articles = [
 
 const Blog = async () => {
     const t = await getTranslations('BlogPage');
+
+    const payload = await getPayload({ config });
+    const settings = await payload.findGlobal({ slug: 'blog-settings' });
+    const podcastIframe = settings.podcastIframe as string | null | undefined;
+
     return (
         <>
             <section className="xl:w-[1180px] lg:w-[940px] lg:mx-auto w-auto h-full mx-5 flex flex-col gap-4 justify-center mt-20">
@@ -48,7 +55,12 @@ const Blog = async () => {
                 <p className="font-light md:text-xl text-lg text-txt-black-sec dark:text-txt-white-sec max-w-[780px]">
                     {t('podcast.description')}
                 </p>
-                {/* iframe podcast */}
+                {podcastIframe && (
+                    <div
+                        className="w-full mt-2"
+                        dangerouslySetInnerHTML={{ __html: podcastIframe }}
+                    />
+                )}
             </section>
             <section className="xl:w-[1180px] lg:w-[940px] lg:mx-auto w-auto h-full mx-5 flex flex-col gap-6 justify-center md:mt-25 mt-15">
                 <h2 className="font-medium text-txt-black-prim dark:text-txt-white-prim md:text-[40px] text-[32px] leading-tight">
