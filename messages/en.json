@@ -1,0 +1,77 @@
+{
+  "Metadata": {
+    "title": "TEDxBratislava",
+    "description": "TEDxBratislava – an independently organised TED event bringing ideas worth spreading."
+  },
+  "Header": {
+    "catalog": "Catalog",
+    "blog": "Blog",
+    "support": "Support us",
+    "team": "Team"
+  },
+  "Footer": {
+    "nav": "Navigation",
+    "catalog": "Catalog",
+    "team": "Team",
+    "blog": "Blog",
+    "support": "Support us",
+    "socials": "Social media",
+    "contact": "Contact",
+    "address": "Tomášikova 12570/50A, 831 04 Bratislava-Nové Mesto",
+    "accountNumber": "Account number: 2924872932/1100",
+    "iban": "IBAN: SK97 1100 0000 0029 2487 2932",
+    "productBy": "Product by",
+    "claimForm": "Claim form",
+    "terms": "Terms",
+    "privacy": "Privacy policy"
+  },
+  "Newsletter": {
+    "title": "Be part of the TEDxBratislava community",
+    "description": "Join people inspired by new perspectives on the world. Our newsletter will bring you news about the upcoming edition, interesting ideas and exclusive invitations.",
+    "emailPlaceholder": "Email address",
+    "submitBtn": "Subscribe"
+  },
+  "BlogPage": {
+    "podcast": {
+      "title": "Podcast",
+      "description": "The podcast \"Vo svojom živle\" covers the biggest and oldest TEDx event in Slovakia – TEDxBratislava. Our aim is to open unusual topics and bring \"ideas worth spreading\". And since many of them have already been heard on our stage, we decided to return to them regularly and in greater depth. Come and find out in which element our guests feel at home!"
+    },
+    "articles": {
+      "title": "Articles"
+    }
+  },
+  "TeamPage": {
+    "title": "Organising Team"
+  },
+  "SupportPage": {
+    "hero": {
+      "title": "Help us bring ideas that change things",
+      "supportBtn": "Support us",
+      "volunteerBtn": "Become a volunteer"
+    },
+    "partner": {
+      "title": "Become a partner",
+      "description": "Are you interested in supporting us by becoming a partner of TEDxBratislava? Contact us and we will be happy to present all the options for becoming a partner of the TEDxBratislava civic association over a coffee.",
+      "contactBtn": "Contact via partneri@tedxbratislava.sk",
+      "callBtn": "Call +421 949 875 764"
+    },
+    "volunteer": {
+      "title": "Become a volunteer",
+      "p1": "Volunteering typically involves two to three days — a preparation day before the event, the conference day itself, and occasionally a wrap-up day after the event. Volunteer tasks cover a range of areas: participant registration, catering, technical support, break activities, and speaker escorting.",
+      "p2": "Most tasks are practical and action-oriented — it may not seem like it at first glance, but you definitely won't be bored. A great atmosphere, new people, and the feeling that you were part of something that simply wouldn't have happened without you await you.",
+      "btn": "Become a volunteer"
+    }
+  },
+  "NotFoundPage": {
+    "metadata": {
+      "title": "Page not found",
+      "description": "The requested page could not be found."
+    },
+    "title": "Page not found",
+    "subtitle": "Sorry, the page you are looking for does not exist.",
+    "btn": "Back to homepage"
+  },
+  "HomePage": {
+    "title": "Hello world!"
+  }
+}

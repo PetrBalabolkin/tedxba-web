@@ -1,5 +1,6 @@
 import Newsletter from "@/sections/newsletter";
 import OrganizerCard from "@/components/ui/OrganizerCard";
+import { getTranslations } from "next-intl/server";
 
 const data = [
     {
@@ -34,11 +35,12 @@ const data = [
     }
 ]
 
-const Team = () => {
+const Team = async () => {
+    const t = await getTranslations('TeamPage');
     return (
         <>
             <section className="xl:w-[1180px] lg:w-[940px] lg:mx-auto w-auto mx-5 flex flex-col gap-6 mt-20">
-                <h2 className="font-medium text-txt-black-prim dark:text-txt-white-prim md:text-[40px] text-[32px]">Organizačný Tím</h2>
+                <h2 className="font-medium text-txt-black-prim dark:text-txt-white-prim md:text-[40px] text-[32px]">{t('title')}</h2>
                 <div className="w-full grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-5">
                     {data.map((member) => (
                         <OrganizerCard
@@ -52,7 +54,7 @@ const Team = () => {
             </section>
             <Newsletter />
         </>
-    )
+    );
 }
 
 export default Team;

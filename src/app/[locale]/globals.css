@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Inter";
-  src: url("../../public/fonts/Inter.woff2") format("woff2");
+  src: url("../../../public/fonts/Inter.woff2") format("woff2");
   font-weight: 100 900;
   font-style: normal;
 }
@@ -50,6 +50,10 @@
   --bg: #1F1E1E;
   --border: #4D4B4B;
   --logo-ink: #FFFFFF;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html, body {

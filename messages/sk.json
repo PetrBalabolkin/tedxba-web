@@ -1,0 +1,74 @@
+{
+  "Metadata": {
+    "title": "TEDxBratislava",
+    "description": "TEDxBratislava – nezávislá konferencia inšpirovaná TED, ktorá prináša myšlienky hodné šírenia."
+  },
+  "Header": {
+    "catalog": "Katalóg",
+    "blog": "Blog",
+    "support": "Podporte nás",
+    "team": "Tím"
+  },
+  "Footer": {
+    "nav": "Navigácia",
+    "catalog": "Katalóg",
+    "team": "Tím",
+    "blog": "Blog",
+    "support": "Podporte nás",
+    "socials": "Sociálne siete",
+    "contact": "Kontakt",
+    "address": "Tomášikova 12570/50A, 831 04 Bratislava-Nové Mesto",
+    "accountNumber": "Číslo účtu: 2924872932/1100",
+    "iban": "IBAN: SK97 1100 0000 0029 2487 2932",
+    "productBy": "Product by",
+    "claimForm": "Reklamačný formulár",
+    "terms": "VOP",
+    "privacy": "Ochrana osobných údajov"
+  },
+  "Newsletter": {
+    "title": "Buď súčasťou komunity TEDxBratislava",
+    "description": "Pripoj sa k ľuďom, ktorých inšpirujú nové pohľady na svet. Newsletter ti prinesie novinky o nadchádzajúcom ročníku, zaujímavé myšlienky a exkluzívne pozvánky.",
+    "emailPlaceholder": "Elektropošta",
+    "submitBtn": "Prihlásiť sa"
+  },
+  "BlogPage": {
+    "podcast": {
+      "title": "Podkast",
+      "description": "Podkast „Vo svojom živle\" zastrešuje najväčšie a najstaršie TEDx podujatie na Slovensku – TEDxBratislava. Naším zámerom je otvárať nevšedné témy a prinášať „myšlienky hodné šírenia\". A keďže z nich už mnohé zazneli na našom javisku, rozhodli sme sa k nim aj pravidelne a viac do hĺbky vracať. Poďte s nami zistiť, v ktorom živle sa cítia ako doma naši hostia!"
+    },
+    "articles": {
+      "title": "Články"
+    }
+  },
+  "TeamPage": {
+    "title": "Organizačný Tím"
+  },
+  "SupportPage": {
+    "hero": {
+      "title": "Pomôž nám priniesť myšlienky, ktoré menia veci",
+      "supportBtn": "Podporiť",
+      "volunteerBtn": "Stať sa dobrovoľníkom"
+    },
+    "partner": {
+      "title": "Staňte sa partnerom",
+      "description": "Máte záujem podporiť nás tým, že sa stanete partnerom TEDxBratislava? Kontaktujte nás a radi vám pri káve predstavíme všetky možnosti, ako sa stať partnerom občianskeho združenia TEDxBratislava.",
+      "contactBtn": "Kontaktovať cez partneri@tedxbratislava.sk",
+      "callBtn": "Zavolať na +421 949 875 764"
+    },
+    "volunteer": {
+      "title": "Buďte dobrovoľníkom",
+      "p1": "Dobrovoľníctvo zvyčajne zahŕňa dva až tri dni — prípravný deň pred podujatím, samotný deň konferencie a príležitostne aj záverečný deň po podujatí. Úlohy dobrovoľníkov pokrývajú rôzne oblasti: registrácia účastníkov, catering, technika, prestávkové aktivity či sprevádzanie rečníkov.",
+      "p2": "Väčšina úloh je praktická a akčná — možno sa to na prvý pohľad nezdá, no nudiť sa rozhodne nebudete. Čaká vás skvelá atmosféra, nový ľudia a pocit, že ste boli pri niečom, čo by bez vás jednoducho nevzniklo.",
+      "btn": "Stať sa dobrovoľníkom"
+    }
+  },
+  "NotFoundPage": {
+    "metadata": {
+      "title": "Stránka nenájdená",
+      "description": "Požadovaná stránka nebola nájdená."
+    },
+    "title": "Stránka nenájdená",
+    "subtitle": "Prepáčte, stránka, ktorú hľadáte, neexistuje.",
+    "btn": "Späť na úvodnú stránku"
+  }
+}

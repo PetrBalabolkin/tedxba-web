@@ -2,28 +2,26 @@
 
 import { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Logo from "@/components/ui/Logo";
 import { RiMenuFill, RiCloseFill } from "@remixicon/react";
 import { useHeader } from "@/context/HeaderContext";
-
-const links = [
-    { href: "/catalog", label: "Katalóg" },
-    { href: "/blog", label: "Blog" },
-    { href: "/support", label: "Podporte nás" },
-    { href: "/team", label: "Tím" },
-];
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const Header = () => {
+    const t = useTranslations('Header');
+    const links = [
+        { href: "/catalog", label: t('catalog') },
+        { href: "/blog", label: t('blog') },
+        { href: "/support", label: t('support') },
+        { href: "/team", label: t('team') },
+    ];
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
     const { transparent, theme } = useHeader();
 
-    // Определяем цвет текста: если хедер прозрачный, то цвет зависит от theme
-    // theme="dark" (картинка тёмная) → текст белый
-    // theme="light" (картинка светлая) → текст чёрный
-    // theme="auto" → стандартное поведение (тёмная/светлая тема сайта)
     const isOverImage = transparent;
     const textColorClass = isOverImage
         ? theme === "light"
@@ -105,6 +103,7 @@ const Header = () => {
                             {link.label}
                         </Link>
                     ))}
+                    <LanguageSwitcher textColorClass={textColorClass} />
                 </nav>
 
                 <RiMenuFill
@@ -140,6 +139,7 @@ const Header = () => {
                                     {link.label}
                                 </Link>
                             ))}
+                            <LanguageSwitcher />
                         </div>
                     </>,
                     document.body
