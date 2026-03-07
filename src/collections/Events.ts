@@ -309,6 +309,41 @@ export const Events: CollectionConfig = {
             ],
         },
 
+        // ─── Photos (Flickr) ──────────────────────────────────────────────
+        {
+            name: 'photos',
+            type: 'group',
+            label: 'Photos Section (Flickr)',
+            fields: [
+                {
+                    name: 'enabled',
+                    type: 'checkbox',
+                    label: 'Show photos section',
+                    defaultValue: false,
+                },
+                {
+                    name: 'titleSk',
+                    type: 'text',
+                    label: 'Section title (SK)',
+                    defaultValue: 'Fotografie',
+                },
+                {
+                    name: 'titleEn',
+                    type: 'text',
+                    label: 'Section title (EN)',
+                    defaultValue: 'Photos',
+                },
+                {
+                    name: 'iframeCode',
+                    type: 'textarea',
+                    label: 'Flickr iframe HTML code',
+                    admin: {
+                        description: 'Paste the full <iframe> or embed HTML from Flickr here.',
+                    },
+                },
+            ],
+        },
+
         // ─── Partners ─────────────────────────────────────────────────────
         {
             name: 'partnersSection',

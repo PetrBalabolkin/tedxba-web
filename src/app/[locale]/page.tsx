@@ -8,6 +8,7 @@ import TicketsSection from "@/sections/event/TicketsSection";
 import SpeakersSection from "@/sections/event/SpeakersSection";
 import ProgramSection from "@/sections/event/ProgramSection";
 import ActivitiesSection from "@/sections/event/ActivitiesSection";
+import PhotosSection from "@/sections/event/PhotosSection";
 import EventPartnersSection from "@/sections/event/EventPartnersSection";
 
 export default async function Home() {
@@ -55,6 +56,10 @@ export default async function Home() {
             {event.activities && (
                 // eslint-disable-next-line @typescript-eslint/no-explicit-any
                 <ActivitiesSection activities={event.activities as any} locale={locale} />
+            )}
+            {event.photos && (
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                <PhotosSection photos={event.photos as any} locale={locale} />
             )}
             {event.partnersSection && (
                 <EventPartnersSection
