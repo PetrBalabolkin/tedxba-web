@@ -1,7 +1,7 @@
+import { notFound } from "next/navigation";
 import { getPayload } from "payload";
 import config from "@payload-config";
 import { getLocale } from "next-intl/server";
-import Newsletter from "@/sections/newsletter";
 
 import HeroSection from "@/sections/event/HeroSection";
 import TicketsSection from "@/sections/event/TicketsSection";
@@ -10,29 +10,38 @@ import ProgramSection from "@/sections/event/ProgramSection";
 import ActivitiesSection from "@/sections/event/ActivitiesSection";
 import EventPartnersSection from "@/sections/event/EventPartnersSection";
 
-export default async function Home() {
+type Props = {
+    params: Promise<{ locale: string; year: string }>;
+};
+
+export async function generateStaticParams() {
+    try {
+        const payload = await getPayload({ config });
+        const result = await payload.find({ collection: 'events', limit: 100, depth: 0 });
+        return result.docs.map((e) => ({ year: String(e.year) }));
+    } catch {
+        return [];
+    }
+}
+
+export default async function EventYearPage({ params }: Props) {
+    const { year } = await params;
+
+    if (!/^\d{4}$/.test(year)) return notFound();
+
     const locale = await getLocale();
     const payload = await getPayload({ config });
 
     const result = await payload.find({
         collection: 'events',
-        where: { isActive: { equals: true } },
+        where: { year: { equals: parseInt(year) } },
         depth: 2,
         limit: 1,
     });
 
     const event = result.docs[0];
+    if (!event) return notFound();
 
-
-    if (!event) {
-        return (
-            <main className="xl:w-[1180px] lg:w-[940px] lg:mx-auto w-auto mx-5 flex items-center justify-center min-h-[60vh]">
-                <p className="text-txt-black-sec dark:text-txt-white-sec text-xl font-light">
-                    No active event configured.
-                </p>
-            </main>
-        );
-    }
 
     return (
         <>
@@ -63,7 +72,7 @@ export default async function Home() {
                     locale={locale}
                 />
             )}
-            <Newsletter />
         </>
     );
 }
+

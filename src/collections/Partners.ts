@@ -45,7 +45,20 @@ export const Partners: CollectionConfig = {
                     label: 'Support / Partners page',
                     value: 'support',
                 },
+                {
+                    label: 'Event pages (annual)',
+                    value: 'event',
+                },
             ],
+        },
+        {
+            name: 'eventCategory',
+            type: 'text',
+            label: 'Event category slug (e.g. gold, silver, media)',
+            admin: {
+                description: 'Must match the category slug defined in the Event → Partners Section → categories. Leave blank to show without category.',
+                condition: (data) => Array.isArray(data?.pages) && data.pages.includes('event'),
+            },
         },
     ],
 }

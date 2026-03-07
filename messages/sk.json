@@ -11,7 +11,8 @@
     "catalog": "Katalóg",
     "blog": "Blog",
     "support": "Podporte nás",
-    "team": "Tím"
+    "team": "Tím",
+    "editions": "Ročníky"
   },
   "Footer": {
     "nav": "Navigácia",
@@ -24,7 +25,7 @@
     "address": "Tomášikova 12570/50A, 831 04 Bratislava-Nové Mesto",
     "accountNumber": "Číslo účtu: 2924872932/1100",
     "iban": "IBAN: SK97 1100 0000 0029 2487 2932",
-    "productBy": "Product by",
+    "productBy": "Web by",
     "claimForm": "Reklamačný formulár",
     "terms": "VOP",
     "privacy": "Ochrana osobných údajov"

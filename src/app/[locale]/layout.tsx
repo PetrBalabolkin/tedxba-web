@@ -4,7 +4,7 @@ import { ThemeProvider } from "next-themes";
 import { NextIntlClientProvider } from "next-intl";
 import { GoogleAnalytics, GoogleTagManager } from "@next/third-parties/google";
 import { HeaderProvider } from "@/context/HeaderContext";
-import Header from "@/components/Header";
+import Header from "@/components/HeaderWrapper";
 import Footer from "@/components/Footer";
 import { getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";

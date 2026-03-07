@@ -11,7 +11,8 @@
     "catalog": "Catalog",
     "blog": "Blog",
     "support": "Support us",
-    "team": "Team"
+    "team": "Team",
+    "editions": "Editions"
   },
   "Footer": {
     "nav": "Navigation",
@@ -24,7 +25,7 @@
     "address": "Tomášikova 12570/50A, 831 04 Bratislava-Nové Mesto",
     "accountNumber": "Account number: 2924872932/1100",
     "iban": "IBAN: SK97 1100 0000 0029 2487 2932",
-    "productBy": "Product by",
+    "productBy": "Web by",
     "claimForm": "Claim form",
     "terms": "Terms",
     "privacy": "Privacy policy"
