@@ -72,6 +72,3 @@ const ActivitiesSection = ({ activities, locale }: Props) => {
 };
 
 export default ActivitiesSection;
-
-
-

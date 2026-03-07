@@ -43,41 +43,17 @@ export default async function EventYearPage({ params }: Props) {
     const event = result.docs[0];
     if (!event) return notFound();
 
+    const e = event as Record<string, unknown>;
 
     return (
         <>
-            {event.hero && (
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                <HeroSection hero={event.hero as any} locale={locale} />
-            )}
-            {event.tickets && (
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                <TicketsSection tickets={event.tickets as any} locale={locale} />
-            )}
-            {event.speakers && (
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                <SpeakersSection speakers={event.speakers as any} locale={locale} />
-            )}
-            {event.program && (
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                <ProgramSection program={event.program as any} locale={locale} />
-            )}
-            {event.activities && (
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                <ActivitiesSection activities={event.activities as any} locale={locale} />
-            )}
-            {event.photos && (
-                // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                <PhotosSection photos={event.photos as any} locale={locale} />
-            )}
-            {event.partnersSection && (
-                <EventPartnersSection
-                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-                    partnersSection={event.partnersSection as any}
-                    locale={locale}
-                />
-            )}
+            {e.hero && <HeroSection hero={e.hero as never} locale={locale} />}
+            {e.tickets && <TicketsSection tickets={e.tickets as never} locale={locale} />}
+            {e.speakers && <SpeakersSection speakers={e.speakers as never} locale={locale} />}
+            {e.program && <ProgramSection program={e.program as never} locale={locale} />}
+            {e.activities && <ActivitiesSection activities={e.activities as never} locale={locale} />}
+            {e.photos && <PhotosSection photos={e.photos as never} locale={locale} />}
+            {e.partnersSection && <EventPartnersSection partnersSection={e.partnersSection as never} locale={locale} />}
         </>
     );
 }
-

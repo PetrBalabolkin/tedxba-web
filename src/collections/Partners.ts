@@ -62,4 +62,3 @@ export const Partners: CollectionConfig = {
         },
     ],
 }
-

@@ -34,4 +34,3 @@ const PhotosSection = ({ photos, locale }: Props) => {
 };
 
 export default PhotosSection;
-
