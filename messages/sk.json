@@ -67,6 +67,32 @@
       "btn": "Stať sa dobrovoľníkom"
     }
   },
+  "ActivitiesSection": {
+    "livePerformances": {
+      "title": "Živé vystúpenia",
+      "description": "Spoznáte myšlienky hodné šírenia. Uvidíte originálne príbehy pozoruhodných ľudí, ktoré zarezonujú."
+    },
+    "activities": {
+      "title": "Sprievodné aktivity",
+      "description": "TEDx nie je len o živých vystúpeniach. Unikátne prestávkové aktivity rozšíria váš zážitok o ďalší rozmer."
+    },
+    "catering": {
+      "title": "Catering",
+      "description": "Cez prestávky sa môžete tešiť na výberovú kávu a snacky, pri ktorých budete networkovať jedna radosť!"
+    },
+    "discussions": {
+      "title": "Diskusie",
+      "description": "Zážitky z prednášok obohatia živé diskusie s účinkujúcimi."
+    },
+    "networking": {
+      "title": "Networking",
+      "description": "Zoznámte sa s ľuďmi z vášho cesta, aj s neznámymi z iných bublín. Buďte súčasťou TEDx komunity."
+    },
+    "art": {
+      "title": "Art",
+      "description": "O hudobný zážitok sa postarajú všestranní umelci, ktorí inšpirujú a prekvapia novým umeleckým prístupom."
+    }
+  },
   "NotFoundPage": {
     "metadata": {
       "title": "404 - Stránka sa nenašla",

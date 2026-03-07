@@ -67,6 +67,32 @@
       "btn": "Become a volunteer"
     }
   },
+  "ActivitiesSection": {
+    "livePerformances": {
+      "title": "Live performances",
+      "description": "You will discover ideas worth spreading. You will see original stories of remarkable people that will resonate."
+    },
+    "activities": {
+      "title": "Side activities",
+      "description": "TEDx is not just about live talks. Unique break activities will expand your experience to another dimension."
+    },
+    "catering": {
+      "title": "Catering",
+      "description": "During the breaks you can look forward to specialty coffee and snacks, perfect for networking!"
+    },
+    "discussions": {
+      "title": "Discussions",
+      "description": "Live discussions with the speakers will enrich the experience from the talks."
+    },
+    "networking": {
+      "title": "Networking",
+      "description": "Meet people from your world, and strangers from other bubbles. Be part of the TEDx community."
+    },
+    "art": {
+      "title": "Art",
+      "description": "The musical experience will be provided by versatile artists who inspire and surprise with a fresh artistic approach."
+    }
+  },
   "NotFoundPage": {
     "metadata": {
       "title": "Page not found",

@@ -23,7 +23,7 @@ function renderSection(key: string, e: Record<string, unknown>, locale: string) 
         case 'program':
             return e.program ? <ProgramSection key={key} program={e.program as never} locale={locale} /> : null;
         case 'activities':
-            return e.activities ? <ActivitiesSection key={key} activities={e.activities as never} locale={locale} /> : null;
+            return e.activities ? <ActivitiesSection key={key} activities={e.activities as never} /> : null;
         case 'photos':
             return e.photos ? <PhotosSection key={key} photos={e.photos as never} locale={locale} /> : null;
         case 'partnersSection':
